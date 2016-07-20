@@ -1,0 +1,41 @@
+* {
+  font-family: monaco;
+}
+
+#courseadding {
+	display: inline-block;
+	width: 350px;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 10px;
+}
+
+#courses_table {
+	display: block;
+	width: 800px;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 10px;
+	margin-top: 20px;
+}
+#button { 
+	margin-left: 200px;
+	margin-top: 20px;
+	width: 120px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: green;
+	color: white;
+	font-size: 16px;
+
+
+}
+
+#namearea {
+	margin-left: 67px;
+}
+
+
+

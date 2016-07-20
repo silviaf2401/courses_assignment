@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+  </head>
+  <body>
+  	<div id = 'courseadding'>
+	    <h1> Add a new course </h1>
+	    <form action='/courses/add' method='POST'>	
+	    	<label id='labelname'> Course name: </label><input id ='namearea' type="text" name="coursename"> <br>
+	    	<label id='labeldescription'> Course description: </label><input type="text" name="description">
+	    	<input id='button' type="Submit" value="ADD">
+		</form>
+	</div>
+   
+    <div id ='courses_table'>
+    	<table>
+    		<tr> 
+    			<td> Course name </td>
+    			<td> Description </td>
+    			<td> Date added </td>
+    			<td> Actions </td>
+    		</tr>
+    		{%for element in course%}
+    		<tr> 
+    			<td> {{element['title']}} </td>
+    			<td> {{element['description']}} </td>
+    			<td> {{element['created_at']}} </td>
+    			<td> <a href='/courses/destroy/{{element['id']}}'>Remove</a> </td>
+            {%endfor%}  
+    		</tr>	
+    	</table>	
+	    	
+	</div>
+
+  </body>
+
+</html>
